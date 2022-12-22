@@ -1,34 +1,190 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
-}
-head {
-    margin:0;
-    padding: 0;
-}
-body {
-    width: 100%;
-    height: 100%;
-}
-header {
-    width: 100%;
-    background-color: #0b0b0b;
-    border-bottom: 10px #000000;
-    height: 65px;
-    margin: 0 auto;
-    padding: 0 2%;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
     display: flex;
-    flex-wrap: wrap;
-}
+    justify-content: space-around;
+    align-items: center;
+    background: #0b0b0b;
+    height: 9vh;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 5vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #0b0b0b;
+      flex-direction: column;
+      align-items: center;
+      justify-content: baseline;
+      padding-top: 50px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      z-index:3
+
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+
+    .logo1 {
+      margin-left: 10px;
+    }
+
+    .botões {
+        display:none;
+        margin-left: 0;
+    }
+
+    .button-doação {
+        display:none;
+        margin-left: 0;
+    }
+
+    .btn_discord {
+        display:none;
+        margin-left: 0;
+    }
+
+    .btn_jambo {
+        display:none;
+        margin-left: 0;
+    }
+
+    .mobile-menu {
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+      z-index:4
+    }
+
+    .main1 {
+      width: 100%;
+      height: 1000px;
+      min-height:max-content;
+      max-height: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .texto-main {
+      width: 90%;
+      margin: auto;
+      padding-left: 14%;
+      padding-bottom: 10%;
+    }
+    .main_cta {
+      flex-direction:column;
+      justify-content: center;
+      margin: auto;
+    }
+    .resumo {
+      margin: 0%;
+    }
+    .txt_resumo {
+      margin: 0%;
+    }
+    .retângulo {
+      width: 90%;
+      height: 90%;
+    }
+    .resumo {
+      margin: 0%;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .btn_nv1 {
+    font-size: 18px;
+    font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-color: #ffffff;
+  }
 
 /* BOTÕES: */
 
 
 main {
     margin: 0 auto;
-    width: 1000px;
+    width: 100%;
     position: relative;
     background-color: #0b0b0b;
 }
@@ -46,7 +202,7 @@ main {
 }
 .button-doação {
     padding: 10px 15px;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 20px;
     font-weight:bold;
     font-family: 'Courier New', Courier, monospace;
@@ -65,7 +221,7 @@ main {
 }
 .btn_discord {
     padding: 8px 10px;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 22px;
     font-weight:bold;
     font-family: 'Courier New', Courier, monospace;
@@ -86,7 +242,7 @@ main {
 }
 .btn_jambo {
     padding: 2px 4px;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 22px;
     font-weight:bold;
     font-family: 'Courier New', Courier, monospace;
@@ -110,14 +266,14 @@ main {
 SESSÃO PRINCIPAL:
 */
 
-section.main {
+section.main1 {
     background-color: black;
     background-image: url('../img/banner.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-width: 1000px;
+    width: 100%;
     min-height: 500px;
     max-height: fit-content;
     display: flex;
@@ -132,10 +288,11 @@ section.center {
 }
 
 .retângulo {
-    width: fit-content;
+    width: 71%;
     height: fit-content;
-    max-width: 800px;
-    max-height: 600px;
+    min-width: 71%;
+    min-height: 70%;
+    margin: auto;
     background-color: #0b0b0b;
     display: flex;
     justify-content: center;
@@ -191,6 +348,7 @@ section.center {
     border-radius: .25em;
     font-size: 18px;
     text-align: center;
+    z-index:2
 }
 .caixa1::after {
     content: '\25BC';
@@ -255,7 +413,10 @@ section details p{
     height: fit-content;
     background-color: #000000;
     border-radius: 25px;
-    padding: 20px 100px;
+}
+
+.txt_resumo {
+  padding: 2% 3%;
 }
 
 .ornamento1 {

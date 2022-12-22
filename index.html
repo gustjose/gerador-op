@@ -11,27 +11,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+
     <header>
-        <main>
-            <div class="logo">
-                <img src="./img/LOGO.png">
+        <nav>
+            <img src="./img/LOGO.png" class="logo1">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
             </div>
+            <ul class="nav-list">
+              <li><a href="#" class="btn_nv1">Início</a></li>
+              <li><a href="#" class="btn_nv1">Sobre</a></li>
+            </ul>
             <div class="botões">
                 <button class="btn_jambo"><a href="https://jamboeditora.com.br/" style="color:inherit"><img src="./img/jambo.png"></a></button>
                 <button class="btn_discord"><a href="https://www.google.com/" style="color:inherit"><i class="fa-brands fa-discord"></a></i></button>
                 <button type="button" class="button-doação"><i class="fa-solid fa-circle-dollar-to-slot"></i> DOAÇÃO</button>
                 <a></a>
             </div>
-        </main>
+          </nav>
+        </header>
+        <script src="./js/mobile-navbar.js"></script>
     </header>
-</body>
 
-<section class="main">
+<section class="main1">
 <div class="center">
     <div class="retângulo">
         <div class="main_cta">
-            <img src="./img/S3Fmbolo_Maior_ocultista-1-1-1024x1005.png" align="left" style="margin:15px 0px;">
+            <img src="./img/S3Fmbolo_Maior_ocultista-1-1-1024x1005.png" class="img1" style="margin:15px 0px;">
             <div class="texto-main">
                 <h1>Gere a sua Missão de Ordem Paranormal RPG:</h1><br>
                 <p>A partir do <strong>Nível de Esposição Paranormal (NEX)</strong> e do número de jogadores, o Gerador recomendará criaturas e itens apropriados.</p><br>
@@ -81,33 +89,35 @@
             <h1 style="color: #ffffff; font-size: 34px; text-align: center;">FICHA DE MISSÃO:</h1><br>
                 <div class="ornamento1"></div>
                 <div class="resumo">
-                <p style="color: #ffffff; font-size: 24px; text-align: center;" id="txt_resumo">“Um(a) <span id="tr_sujeito" style="color: #8900c9;">sujeito</span> está <span id="tr_ação" style="color: #d40124;">ação</span> em um(a) <span id="tr_local" style="color: #5a1eff;">local</span>. Durante a investigação, o grupo terá a ajuda de um(a) <span id="tr_ação" style="color: #00ca22;">aliado</span> e poderá encontrar um(a) <span id="tr_ação" style="color: #00f7ea;">objeto</span>. Porém, em determinado momento os agentes serão surpreendidos pelo <span id="tr_ação" style="color: #ffa807;">evento</span>”</p>
+                <p style="color: #ffffff; font-size: 24px; text-align: center;" id="txt_resumo" class="txt_resumo">“Um(a) <span id="tr_sujeito" style="color: #8900c9;">sujeito</span> <span id="tr_ação" style="color: #d40124;">ação</span> em um(a) <span id="tr_local" style="color: #5a1eff;">local</span>. Durante a investigação, o grupo terá a ajuda de um(a) <span id="tr_aliado" style="color: #00ca22;">aliado</span> e poderá encontrar um(a) <span id="tr_objeto" style="color: #00f7ea;">objeto</span>. Porém, em determinado momento os agentes serão surpreendidos por <span id="tr_evento" style="color: #ffa807;">evento</span>.</p>
                 </div>
             <div class="text_ficha">
                 <details>
                     <summary style="color: #ffffff;">Sujeito</summary>
                     <p style="color: #ffffff;" id="txt_sujeito">Clique em 'Gerar Missão'!</p>
-                    <p id="txt_criatura-1" style="color:#8900c9; margin-top: -20px;"></p>
+                    <p id="txt_criatura-1" style="color:#8900c9;"></p>
                 </details>
                 <details>
                     <summary style="color: #ffffff;">Ação</summary>
                     <p style="color: #ffffff;" id="txt_acoes">Clique em 'Gerar Missão'!</p>
+                    <p id="txt_criatura-2" style="color:#d40124;"></p>
                 </details>
                 <details>
                     <summary style="color: #ffffff;">Local</summary>
-                    <p style="color: #ffffff;">Clique em 'Gerar Missão'!</p>
+                    <p style="color: #ffffff;" id="txt_local">Clique em 'Gerar Missão'!</p>
                 </details>
                 <details>
                     <summary style="color: #ffffff;">Aliado</summary>
-                    <p style="color: #ffffff;">Clique em 'Gerar Missão'!</p>
+                    <p style="color: #ffffff;" id="txt_aliado">Clique em 'Gerar Missão'!</p>
                 </details>
                 <details>
                     <summary style="color: #ffffff;">Objeto</summary>
-                    <p style="color: #ffffff;">Clique em 'Gerar Missão'!</p>
+                    <p style="color: #ffffff;" id="txt_objeto">Clique em 'Gerar Missão'!</p>
+                    <p id="txt_objeto-1" style="color:#00f7ea;"></p>
                 </details>
                 <details>
                     <summary style="color: #ffffff;">Evento</summary>
-                    <p style="color: #ffffff;">Clique em 'Gerar Missão'!</p>
+                    <p style="color: #ffffff;" id="txt_evento">Clique em 'Gerar Missão'!</p>
                 </details>
             </div>
         </div>
